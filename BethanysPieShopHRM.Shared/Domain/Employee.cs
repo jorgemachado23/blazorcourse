@@ -34,7 +34,6 @@ namespace BethanysPieShopHRM.Shared.Domain
 
         public bool IsOnHoliday { get; set; } = false;
 
-
         public string Comment { get; set; } = string.Empty;
 
         public DateTime? JoinedDate { get; set; }
