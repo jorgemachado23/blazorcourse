@@ -10,6 +10,6 @@ public partial class EmployeeOverview
     protected async override Task OnInitializedAsync()
     {
         await Task.Delay(1000); // Simulate a delay for data fetching
-        Employees = MockDataService.Employees;
+        Employees = MockDataService.Employees ?? new List<Employee>();
     }
 }
