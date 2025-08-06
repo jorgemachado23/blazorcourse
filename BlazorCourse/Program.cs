@@ -1,10 +1,26 @@
 using BlazorCourse.Components;
+using BlazorCourse.Contracts.Repositories;
+using BlazorCourse.Contracts.Services;
+using BlazorCourse.Data;
+using BlazorCourse.Repositories;
+using BlazorCourse.Services;
+using BlazorCourse.State;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddDbContextFactory<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+builder.Services.AddScoped<IEmployeeDataService, EmployeeDataService>();
+builder.Services.AddScoped<ApplicationState>();
+builder.Services.AddScoped<ITimeRegistrationRepository, TimeRegistrationRepository>();
+builder.Services.AddScoped<ITimeRegistrationDataService, TimeRegistrationDataService>();
 
 var app = builder.Build();
 

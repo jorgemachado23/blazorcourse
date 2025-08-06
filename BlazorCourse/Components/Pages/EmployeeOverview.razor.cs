@@ -1,5 +1,6 @@
 using BethanysPieShopHRM.Shared.Domain;
-using BlazorCourse.Services;
+using BlazorCourse.Contracts.Services;
+using Microsoft.AspNetCore.Components;
 
 namespace BlazorCourse.Components.Pages;
 
@@ -9,10 +10,12 @@ public partial class EmployeeOverview
     private Employee? _selectedEmployee;
     private string Title = "Employee Overview";
 
+    [Inject]
+    private IEmployeeDataService EmployeeDataService { get; set; } = default!;
+
     protected async override Task OnInitializedAsync()
     {
-        await Task.Delay(1000); // Simulate a delay for data fetching
-        Employees = MockDataService.Employees ?? new List<Employee>();
+        Employees = (await EmployeeDataService.GetAllEmployees()).ToList();
     }
 
     private void ShowQuickView(Employee selectedEmployee)
