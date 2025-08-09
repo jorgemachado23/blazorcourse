@@ -18,7 +18,6 @@ public partial class EmployeeDetail
 
     [Inject]
     private ITimeRegistrationDataService? TimeRegistrationDataService { get; set; }
-    private float itemHeight = 50;
 
     protected IQueryable<TimeRegistration>? itemsQueryable;
     protected int queryableCount = 0;
@@ -26,7 +25,7 @@ public partial class EmployeeDetail
 
     protected async override Task OnInitializedAsync()
     {
-        Employee = await EmployeeDataService?.GetEmployeeById(EmployeeId);
+        Employee = await EmployeeDataService?.GetEmployeeDetails(EmployeeId);
         // TimeRegistrations = await TimeRegistrationDataService?.GetTimeRegistrationsForEmployee(EmployeeId);
         itemsQueryable = (await TimeRegistrationDataService?.GetTimeRegistrationsForEmployee(EmployeeId)
         ).AsQueryable();
