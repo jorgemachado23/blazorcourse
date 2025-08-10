@@ -1,6 +1,6 @@
 using BethanysPieShopHRM.Shared.Domain;
 
-namespace BlazorCourse.Contracts.Services;
+namespace BlazorCourse.Client;
 
 public interface IEmployeeDataService
 {

@@ -1,5 +1,5 @@
 using BethanysPieShopHRM.Shared.Domain;
-using BlazorCourse.Contracts.Services;
+using BlazorCourse.Client;
 using Microsoft.AspNetCore.Components;
 
 namespace BlazorCourse.Components.Pages;

@@ -1,8 +1,7 @@
 using BethanysPieShopHRM.Shared.Domain;
-using BlazorCourse.Contracts.Services;
 using Microsoft.AspNetCore.Components;
 
-namespace BlazorCourse.Components.Pages;
+namespace BlazorCourse.Client.Pages;
 
 public partial class EmployeeOverview
 {

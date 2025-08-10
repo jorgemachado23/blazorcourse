@@ -1,7 +1,7 @@
 using BethanysPieShopHRM.Shared.Domain;
 using Microsoft.AspNetCore.Components;
 
-namespace BlazorCourse.Components;
+namespace BlazorCourse.Client.Components;
 
 public partial class QuickViewPopup
 {

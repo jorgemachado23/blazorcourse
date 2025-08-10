@@ -1,6 +1,6 @@
 using BethanysPieShopHRM.Shared.Domain;
+using BlazorCourse.Client;
 using BlazorCourse.Contracts.Repositories;
-using BlazorCourse.Contracts.Services;
 using Microsoft.AspNetCore.Hosting;
 
 namespace BlazorCourse.Services;

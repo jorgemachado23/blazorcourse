@@ -1,4 +1,5 @@
 using BethanysPieShopHRM.Shared.Domain;
+using BlazorCourse.Client;
 using BlazorCourse.Contracts.Services;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.QuickGrid;
