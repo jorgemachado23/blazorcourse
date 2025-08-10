@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BethanysPieShopHRM.Shared",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCourse.Client", "BlazorCourse.Client\BlazorCourse.Client.csproj", "{B959ABFA-6D88-3042-69AA-C0291832C2E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCourse.ComponentLibrary", "BlazorCourse.ComponentLibrary\BlazorCourse.ComponentLibrary.csproj", "{8AC2B06F-6133-437C-A5D2-2C434A59E816}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{B959ABFA-6D88-3042-69AA-C0291832C2E7}.Release|x64.Build.0 = Release|Any CPU
 		{B959ABFA-6D88-3042-69AA-C0291832C2E7}.Release|x86.ActiveCfg = Release|Any CPU
 		{B959ABFA-6D88-3042-69AA-C0291832C2E7}.Release|x86.Build.0 = Release|Any CPU
+		{8AC2B06F-6133-437C-A5D2-2C434A59E816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AC2B06F-6133-437C-A5D2-2C434A59E816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AC2B06F-6133-437C-A5D2-2C434A59E816}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8AC2B06F-6133-437C-A5D2-2C434A59E816}.Debug|x64.Build.0 = Debug|Any CPU
+		{8AC2B06F-6133-437C-A5D2-2C434A59E816}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8AC2B06F-6133-437C-A5D2-2C434A59E816}.Debug|x86.Build.0 = Debug|Any CPU
+		{8AC2B06F-6133-437C-A5D2-2C434A59E816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AC2B06F-6133-437C-A5D2-2C434A59E816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AC2B06F-6133-437C-A5D2-2C434A59E816}.Release|x64.ActiveCfg = Release|Any CPU
+		{8AC2B06F-6133-437C-A5D2-2C434A59E816}.Release|x64.Build.0 = Release|Any CPU
+		{8AC2B06F-6133-437C-A5D2-2C434A59E816}.Release|x86.ActiveCfg = Release|Any CPU
+		{8AC2B06F-6133-437C-A5D2-2C434A59E816}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

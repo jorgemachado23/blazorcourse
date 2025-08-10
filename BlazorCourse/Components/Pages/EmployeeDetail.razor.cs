@@ -1,4 +1,5 @@
 using BethanysPieShopHRM.Shared.Domain;
+using BethanysPieShopHRM.Shared.Models;
 using BlazorCourse.Client;
 using BlazorCourse.Contracts.Services;
 using Microsoft.AspNetCore.Components;
@@ -24,6 +25,8 @@ public partial class EmployeeDetail
     protected int queryableCount = 0;
     public PaginationState pagination = new() { ItemsPerPage = 10 };
 
+    public List<Marker> MapMarkers { get; set; } = new List<Marker>();
+
     protected async override Task OnInitializedAsync()
     {
         Employee = await EmployeeDataService?.GetEmployeeDetails(EmployeeId);
@@ -31,6 +34,14 @@ public partial class EmployeeDetail
         itemsQueryable = (await TimeRegistrationDataService?.GetTimeRegistrationsForEmployee(EmployeeId)
         ).AsQueryable();
         queryableCount = itemsQueryable?.Count() ?? 0;
+
+        if (Employee.Longitude.HasValue && Employee.Latitude.HasValue)
+        {
+            MapMarkers = new List<Marker>
+            {
+                new Marker{Description = $"{Employee.FirstName} {Employee.LastName}",  ShowPopup = false, X = Employee.Longitude.Value, Y = Employee.Latitude.Value}
+            };
+        }
     }
 
     public async ValueTask<ItemsProviderResult<TimeRegistration>> LoadTimeRegistrations(ItemsProviderRequest request)

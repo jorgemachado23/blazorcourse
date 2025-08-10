@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BethanysPieShopHRM.Shared\BethanysPieShopHRM.Shared.csproj" />
     <ProjectReference Include="..\BlazorCourse.Client\BlazorCourse.Client.csproj" />
+    <ProjectReference Include="..\BlazorCourse.ComponentLibrary\BlazorCourse.ComponentLibrary.csproj" />
   </ItemGroup>
 
   <ItemGroup>
